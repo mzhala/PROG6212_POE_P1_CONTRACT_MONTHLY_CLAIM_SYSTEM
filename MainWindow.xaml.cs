@@ -20,5 +20,17 @@ namespace Contract_Monthly_Claim_System
         {
             InitializeComponent();
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Lecturer_Claim_Page obj = new Lecturer_Claim_Page();
+            this.Visibility = Visibility.Hidden;
+            obj.Show();
+        }
     }
 }

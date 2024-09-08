@@ -23,18 +23,19 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="TextBox">
                         <Border x:Name="border"
-                                Background="{TemplateBinding Background}"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="{TemplateBinding BorderThickness}"
-                                CornerRadius="3">
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="3">
                             <ScrollViewer x:Name="PART_ContentHost"
-                                          HorizontalAlignment="Stretch"
-                                          VerticalAlignment="Stretch"/>
+                                  HorizontalAlignment="Stretch"
+                                  VerticalAlignment="Stretch"/>
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style>
+
         <!-- Define the style for the button -->
         <Style x:Key="CustomButtonStyle" TargetType="Button">
             <!-- Define the base style -->
@@ -49,10 +50,10 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
                         <Border x:Name="border"
-                            Background="{TemplateBinding Background}"
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="{TemplateBinding BorderThickness}"
-                            CornerRadius="5">
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    CornerRadius="5">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                         <ControlTemplate.Triggers>
@@ -68,13 +69,146 @@
             </Setter>
         </Style>
 
+        <!-- Style for a Border with a black border and rounded corners -->
+        <Style x:Key="RoundedBorderStyle" TargetType="Border">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="#C9C9C9"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="SnapsToDevicePixels" Value="True"/>
+        </Style>
+
+        <!-- Style for ComboBox -->
+        <Style x:Key="ComboBoxStyle" TargetType="ComboBox">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+
     </Window.Resources>
     <Grid Margin="0,-16,0,16">
-        <Rectangle HorizontalAlignment="Center" Height="62" Stroke="Black" VerticalAlignment="Top" Width="1922" Fill="Black"/>
-        <Label Content="Monthly Claims" HorizontalAlignment="Left" Height="62" Margin="56,0,0,0" VerticalAlignment="Top" Width="471" FontFamily="Georgia" FontSize="36" Foreground="White" VerticalContentAlignment="Center"/>
-        <Label Content="Welcome back! Please enter your details." HorizontalAlignment="Left" Height="39" Margin="88,350,0,0" VerticalAlignment="Top" Width="471" FontFamily="Century Gothic" FontSize="20"/>
-        <Label Content="Email" HorizontalAlignment="Left" Height="31" Margin="88,435,0,0" VerticalAlignment="Top" Width="471" FontFamily="Century Gothic" FontSize="20"/>
-        <Label Content="Password" HorizontalAlignment="Left" Height="31" Margin="88,552,0,0" VerticalAlignment="Top" Width="471" FontFamily="Century Gothic" FontSize="20"/>
-        <Button Content="Login" Style="{StaticResource CustomButtonStyle}" HorizontalAlignment="Left" Height="74" Margin="88,685.7,0,0" VerticalAlignment="Top" Width="624" FontSize="20"/>
+        <Border Style="{StaticResource RoundedBorderStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="88,258,0,0" Width="1751" Height="112">
+            <Grid>
+                <Label Content="Month" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="187" FontFamily="Century Gothic" FontSize="20" Margin="20,8,0,0"/>
+                <ComboBox Style="{StaticResource ComboBoxStyle}" HorizontalAlignment="Left" Height="40" Margin="20,50,0,0" VerticalAlignment="Top" Width="187">
+                    <ComboBoxItem Content="January"/>
+                    <ComboBoxItem Content="February"/>
+                    <ComboBoxItem Content="March"/>
+                    <ComboBoxItem Content="April"/>
+                    <ComboBoxItem Content="May"/>
+                    <ComboBoxItem Content="June"/>
+                    <ComboBoxItem Content="July"/>
+                    <ComboBoxItem Content="August"/>
+                    <ComboBoxItem Content="September"/>
+                    <ComboBoxItem Content="October"/>
+                    <ComboBoxItem Content="November"/>
+                    <ComboBoxItem Content="December"/>
+                </ComboBox>
+                <Label Content="Program Code" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="185" FontFamily="Century Gothic" FontSize="20" Margin="278,8,0,0"/>
+                <ComboBox x:Name="program_code" Style="{StaticResource ComboBoxStyle}" HorizontalAlignment="Left" Height="40" Margin="278,50,0,0" VerticalAlignment="Top" Width="185">
+                    <ComboBoxItem Content="PROG1"/>
+                    <ComboBoxItem Content="PROG2"/>
+                    <ComboBoxItem Content="PROG3"/>
+                    <ComboBoxItem Content="PROG4"/>
+                    <ComboBoxItem Content="PROG5"/>
+                    <ComboBoxItem Content="PROG6"/>
+                    <ComboBoxItem Content="PROG7"/>
+                    <ComboBoxItem Content="PROG8"/>
+                    <ComboBoxItem Content="PROG9"/>
+                    <ComboBoxItem Content="PROG10"/>
+                    <ComboBoxItem Content="PROG11"/>
+                    <ComboBoxItem Content="PROG12"/>
+                </ComboBox>
+                <Label Content="Module" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="186" FontFamily="Century Gothic" FontSize="20" Margin="535,8,0,0"/>
+                <ComboBox x:Name="program_code_Copy" Style="{StaticResource ComboBoxStyle}" HorizontalAlignment="Left" Height="40" Margin="535,50,0,0" VerticalAlignment="Top" Width="186">
+                    <ComboBoxItem Content="MOD1"/>
+                    <ComboBoxItem Content="MOD2"/>
+                    <ComboBoxItem Content="MOD3"/>
+                    <ComboBoxItem Content="MOD4"/>
+                    <ComboBoxItem Content="MOD5"/>
+                    <ComboBoxItem Content="MOD6"/>
+                    <ComboBoxItem Content="MOD7"/>
+                    <ComboBoxItem Content="MOD8"/>
+                    <ComboBoxItem Content="MOD9"/>
+                    <ComboBoxItem Content="MOD10"/>
+                    <ComboBoxItem Content="MOD11"/>
+                    <ComboBoxItem Content="MOD12"/>
+                </ComboBox>
+                <Label Content="Rate /hr" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="186" FontFamily="Century Gothic" FontSize="20" Margin="793,8,0,0"/>
+                <TextBox Style="{StaticResource TextBoxStyle}" HorizontalAlignment="Left" Margin="793,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186" Height="40" HorizontalContentAlignment="Left" FontSize="20"/>
+                <Label Content="Hours" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="185" FontFamily="Century Gothic" FontSize="20" Margin="1051,8,0,0"/>
+                <TextBox Style="{StaticResource TextBoxStyle}" HorizontalAlignment="Left" Margin="1051,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="185" Height="40" HorizontalContentAlignment="Left" FontSize="20"/>
+                <Label Content="Support document" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="202" FontFamily="Century Gothic" FontSize="20" Margin="1307,8,0,0"/>
+                <Button Content="Upload" Style="{StaticResource CustomButtonStyle}" HorizontalAlignment="Left" Height="40" Margin="1307,50,0,0" VerticalAlignment="Top" Width="187" FontSize="20" FontWeight="Normal"/>
+                <Button Content="Add Claim" Style="{StaticResource CustomButtonStyle}" HorizontalAlignment="Left" Height="40" Margin="1555,50,0,0" VerticalAlignment="Top" Width="170" FontSize="20" FontWeight="Normal"/>
+            </Grid>
+        </Border>
+        <Border Style="{StaticResource RoundedBorderStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="88,391,0,0" Width="1751" Height="511" Padding="10,10,10,10">
+            <DataGrid x:Name="MyDataGrid"
+                  AutoGenerateColumns="False"
+                  VerticalAlignment="Top"
+                  ColumnWidth="*"
+                  FontSize="20"
+                  GridLinesVisibility="None"  
+                HeadersVisibility="Column"
+                BorderBrush="#797979"
+                BorderThickness="1" Height="428">
+                <DataGrid.Resources>
+                    <!-- Style for DataGridCell -->
+                    <Style TargetType="DataGridCell">
+                        <Setter Property="BorderBrush" Value="#797979" />
+                        <!-- Remove cell borders -->
+                        <Setter Property="BorderThickness" Value="0 ,0, 1, 1" />
+                    </Style>
+
+                    <!-- Style for DataGridRow -->
+                    <Style TargetType="DataGridRow">
+                        <Setter Property="BorderBrush" Value="#797979" />
+                        <!-- Remove row borders -->
+                        <Setter Property="BorderThickness" Value="0" />
+                    </Style>
+
+                    <!-- Style for DataGridColumnHeader -->
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="BorderBrush" Value="#797979" />
+                        <!-- Remove column header borders -->
+                        <Setter Property="BorderThickness" Value="0,0,1,1" />
+                        <!-- Set header background color -->
+                        <Setter Property="Background" Value="White" />
+                        <Setter Property="FontWeight" Value="Normal" />
+                        <Setter Property="Padding" Value="5" />
+
+                    </Style>
+
+                </DataGrid.Resources>
+                <!-- Define columns with headers -->
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Claim No" Binding="{Binding Column1}" />
+                    <DataGridTextColumn Header="Programe Code" Binding="{Binding Column2}" />
+                    <DataGridTextColumn Header="Module Code" Binding="{Binding Column3}" />
+                    <DataGridTextColumn Header="Rate /hr" Binding="{Binding Column4}" />
+                    <DataGridTextColumn Header="Hours" Binding="{Binding Column5}" />
+                    <DataGridTextColumn Header="Claim Amount" Binding="{Binding Column6}" />
+                    <DataGridTextColumn Header="Attached Doc." Binding="{Binding Column7}" />
+                    <DataGridTextColumn Header="Status" Binding="{Binding Column8}" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
+        <Rectangle HorizontalAlignment="Center" Height="62" Stroke="Black" VerticalAlignment="Top" Width="1922" Fill="Black" Margin="0,16,0,0"/>
+        <Label Content="Monthly Claims" HorizontalAlignment="Left" Height="62" Margin="65,15,0,0" VerticalAlignment="Top" Width="471" FontFamily="Arial" FontSize="36" Foreground="White" VerticalContentAlignment="Center"/>
+        <Button Content="Submit Monthly Claim" Style="{StaticResource CustomButtonStyle}" HorizontalAlignment="Left" Height="60" Margin="88,919,0,0" VerticalAlignment="Top" Width="300" FontSize="20"/>
+        <Button Content="Logout" Style="{StaticResource CustomButtonStyle}" HorizontalAlignment="Left" Height="52" Margin="1765,20,0,0" VerticalAlignment="Top" Width="100" FontSize="20" Click="btn_logout_click" FontWeight="Normal"/>
+        <Label Content="Lecture Name:" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="187" FontFamily="Century Gothic" FontSize="20" Margin="88,111,0,0"/>
+        <Label Content="Employee No.:" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="250" FontFamily="Century Gothic" FontSize="20" Margin="88,152,0,0"/>
+        <Label Content="Lecture No.:" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="250" FontFamily="Century Gothic" FontSize="20" Margin="88,193,0,0"/>
+        <Button Content="Historical Claims" Style="{StaticResource CustomButtonStyle}" HorizontalAlignment="Left" Height="60" Margin="1615,111,0,0" VerticalAlignment="Top" Width="224" FontSize="20" Click="btn_logout_click"/>
+        <Label Content="Total Claim Amount    R" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="238" FontFamily="Century Gothic" FontSize="20" Margin="940,847,0,0"/>
+        <TextBox Style="{StaticResource TextBoxStyle}" HorizontalAlignment="Left" Margin="1178,846,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="217" Height="40" HorizontalContentAlignment="Left" FontSize="20" IsEnabled="False"/>
+        <Button Content="Remove Claim" Style="{StaticResource CustomButtonStyle}" HorizontalAlignment="Left" Height="40" Margin="1644,846,0,0" VerticalAlignment="Top" Width="170" FontSize="20" FontWeight="Normal"/>
+
     </Grid>
 </Window>

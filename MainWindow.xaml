@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Contract_Monthly_Claim_System"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1020" Width="1920"
+        Title="Home" Height="1020" Width="1920"
         Left="0" Top="0">
     <Window.Resources>
         <!-- Define a style for the TextBox -->

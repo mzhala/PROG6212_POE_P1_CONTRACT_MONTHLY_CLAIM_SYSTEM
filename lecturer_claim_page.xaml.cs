@@ -45,5 +45,12 @@ namespace Contract_Monthly_Claim_System
                 new MyDataRow { Column1 = "", Column2 = "", Column3 = "", Column4 = "", Column5 = "", Column6 = "", Column7 = "", Column8 = ""}
             };
         }
+
+        private void btn_historical_claims_click(object sender, RoutedEventArgs e)
+        {
+            lecturer_historical_claims_page obj = new lecturer_historical_claims_page();
+            this.Visibility = Visibility.Hidden;
+            obj.Show();
+        }
     }
 }

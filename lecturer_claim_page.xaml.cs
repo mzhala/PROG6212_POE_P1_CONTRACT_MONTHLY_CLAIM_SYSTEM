@@ -48,7 +48,7 @@ namespace Contract_Monthly_Claim_System
 
         private void btn_historical_claims_click(object sender, RoutedEventArgs e)
         {
-            lecturer_historical_claims_page obj = new lecturer_historical_claims_page();
+            Lecturer_Historical_Claims_Page obj = new Lecturer_Historical_Claims_Page();
             this.Visibility = Visibility.Hidden;
             obj.Show();
         }

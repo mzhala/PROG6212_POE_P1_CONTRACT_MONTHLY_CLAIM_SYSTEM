@@ -92,7 +92,7 @@
     </Window.Resources>
     <Grid Margin="0,-16,0,16">
         <Border Style="{StaticResource RoundedBorderStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="88,258,0,0" Width="1751" Height="112">
-            <Grid>
+            <Grid Height="110.2">
                 <Label Content="Month" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="187" FontFamily="Century Gothic" FontSize="20" Margin="20,8,0,0"/>
                 <ComboBox Style="{StaticResource ComboBoxStyle}" HorizontalAlignment="Left" Height="40" Margin="20,50,0,0" VerticalAlignment="Top" Width="187">
                     <ComboBoxItem Content="January"/>

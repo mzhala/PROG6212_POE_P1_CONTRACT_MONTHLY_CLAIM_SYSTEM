@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Contract_Monthly_Claim_System
 {
     /// <summary>
-    /// Interaction logic for lecturer_historical_claims_page.xaml
+    /// Interaction logic for Claim_Review_Page.xaml
     /// </summary>
-    public partial class Lecturer_Historical_Claims_Page : Window
+    public partial class Claim_Review_Page : Window
     {
-        public Lecturer_Historical_Claims_Page()
+        public Claim_Review_Page()
         {
             InitializeComponent();
         }

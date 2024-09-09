@@ -26,9 +26,16 @@ namespace Contract_Monthly_Claim_System
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btn_lecture_click(object sender, RoutedEventArgs e)
         {
             Lecturer_Claim_Page obj = new Lecturer_Claim_Page();
+            this.Visibility = Visibility.Hidden;
+            obj.Show();
+        }
+
+        private void btn_management_click(object sender, RoutedEventArgs e)
+        {
+            Claim_Review_Page obj = new Claim_Review_Page();
             this.Visibility = Visibility.Hidden;
             obj.Show();
         }

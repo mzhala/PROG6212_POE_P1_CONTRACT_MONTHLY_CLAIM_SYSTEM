@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Contract_Monthly_Claim_System"
         mc:Ignorable="d"
-        Title="Claim_Review_Historical_Page" Height="1020" Width="1920"
+        Title="" Height="1020" Width="1920"
         Left="0" Top="0">
     <Window.Resources>
         <!-- Define a style for the TextBox -->
@@ -194,7 +194,7 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Lecturer No" Binding="{Binding Column0}" />
                     <DataGridTextColumn Header="Claim No" Binding="{Binding Column1}" />
-                    <DataGridTextColumn Header="Programe Code" Binding="{Binding Column2}" />
+                    <DataGridTextColumn Header="Program Code" Binding="{Binding Column2}" />
                     <DataGridTextColumn Header="Module Code" Binding="{Binding Column3}" />
                     <DataGridTextColumn Header="Rate /hr" Binding="{Binding Column4}" />
                     <DataGridTextColumn Header="Hours" Binding="{Binding Column5}" />
@@ -205,13 +205,15 @@
             </DataGrid>
         </Border>
         <Rectangle HorizontalAlignment="Center" Height="62" Stroke="Black" VerticalAlignment="Top" Width="1922" Fill="Black" Margin="0,16,0,0"/>
-        <Label Content="Historical Claims" HorizontalAlignment="Left" Height="62" Margin="65,15,0,0" VerticalAlignment="Top" Width="471" FontFamily="Arial" FontSize="36" Foreground="White" VerticalContentAlignment="Center"/>
+        <Label Content="Claims Management History" HorizontalAlignment="Left" Height="62" Margin="65,15,0,0" VerticalAlignment="Top" Width="471" FontFamily="Arial" FontSize="36" Foreground="White" VerticalContentAlignment="Center"/>
+        <Grid>
+            <Image Source="Logo.png" Width="30" Height="30" Margin="15,32,0,0" Stretch="UniformToFill" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        </Grid>
         <Button Content="Logout" Style="{StaticResource CustomButtonStyle}" HorizontalAlignment="Left" Height="52" Margin="1765,20,0,0" VerticalAlignment="Top" Width="100" FontSize="20" Click="btn_logout_click" FontWeight="Normal"/>
-        <Button Content="Back" Style="{StaticResource CustomButtonStyle}" HorizontalAlignment="Left" Height="60" Margin="1615,111,0,0" VerticalAlignment="Top" Width="224" FontSize="20" Click="btn_historical_click"/>
+        <Button Content="Back" Style="{StaticResource CustomButtonStyle}" HorizontalAlignment="Left" Height="60" Margin="1615,111,0,0" VerticalAlignment="Top" Width="224" FontSize="20" Click="btn_back_click"/>
         <Button Content="View Attachment" Style="{StaticResource CustomButtonStyle}" HorizontalAlignment="Left" Height="40" Margin="1645,420,0,0" VerticalAlignment="Top" Width="170" FontSize="20" FontWeight="Normal"/>
-        <Label Content="Reviewer Name:" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="187" FontFamily="Century Gothic" FontSize="20" Margin="88,111,0,0"/>
+        <Label Content="Manager Name:" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="187" FontFamily="Century Gothic" FontSize="20" Margin="88,111,0,0"/>
         <Label Content="Employee No.:" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="250" FontFamily="Century Gothic" FontSize="20" Margin="88,152,0,0"/>
-        <Label Content="Reviewer No.:" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="250" FontFamily="Century Gothic" FontSize="20" Margin="88,193,0,0"/>
 
     </Grid>
 </Window>

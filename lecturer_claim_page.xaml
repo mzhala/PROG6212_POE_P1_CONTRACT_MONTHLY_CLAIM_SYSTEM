@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Contract_Monthly_Claim_System"
         mc:Ignorable="d"
-        Title="Claiming Page" Height="1020" Width="1920"
+        Title="" Height="1020" Width="1920"
         Left="0" Top="0">
     <Window.Resources>
         <!-- Define a style for the TextBox -->
@@ -93,8 +93,8 @@
     <Grid Margin="0,-16,0,16">
         <Border Style="{StaticResource RoundedBorderStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="88,258,0,0" Width="1751" Height="112">
             <Grid Height="110.2">
-                <Label Content="Month" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="187" FontFamily="Century Gothic" FontSize="20" Margin="20,8,0,0"/>
-                <ComboBox Style="{StaticResource ComboBoxStyle}" HorizontalAlignment="Left" Height="40" Margin="20,50,0,0" VerticalAlignment="Top" Width="187">
+                <Label Content="Month" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="120" FontFamily="Century Gothic" FontSize="20" Margin="20,8,0,0"/>
+                <ComboBox Style="{StaticResource ComboBoxStyle}" HorizontalAlignment="Left" Height="40" Margin="20,50,0,0" VerticalAlignment="Top" Width="118">
                     <ComboBoxItem Content="January"/>
                     <ComboBoxItem Content="February"/>
                     <ComboBoxItem Content="March"/>
@@ -145,6 +145,12 @@
                 <Label Content="Support document" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="202" FontFamily="Century Gothic" FontSize="20" Margin="1307,8,0,0"/>
                 <Button Content="Upload" Style="{StaticResource CustomButtonStyle}" HorizontalAlignment="Left" Height="40" Margin="1307,50,0,0" VerticalAlignment="Top" Width="187" FontSize="20" FontWeight="Normal"/>
                 <Button Content="Add Claim" Style="{StaticResource CustomButtonStyle}" HorizontalAlignment="Left" Height="40" Margin="1555,50,0,0" VerticalAlignment="Top" Width="170" FontSize="20" FontWeight="Normal"/>
+                <Label Content="Year" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="120" FontFamily="Century Gothic" FontSize="20" Margin="143,8,0,0"/>
+                <ComboBox Style="{StaticResource ComboBoxStyle}" HorizontalAlignment="Left" Height="40" Margin="143,50,0,0" VerticalAlignment="Top" Width="76">
+                    <ComboBoxItem Content="2024"/>
+                    <ComboBoxItem Content="2023"/>
+                    <ComboBoxItem Content="2022"/>
+                </ComboBox>
             </Grid>
         </Border>
         <Border Style="{StaticResource RoundedBorderStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="88,391,0,0" Width="1751" Height="511" Padding="10,10,10,10">
@@ -188,7 +194,7 @@
                 <!-- Define columns with headers -->
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Claim No" Binding="{Binding Column1}" />
-                    <DataGridTextColumn Header="Programe Code" Binding="{Binding Column2}" />
+                    <DataGridTextColumn Header="Program Code" Binding="{Binding Column2}" />
                     <DataGridTextColumn Header="Module Code" Binding="{Binding Column3}" />
                     <DataGridTextColumn Header="Rate /hr" Binding="{Binding Column4}" />
                     <DataGridTextColumn Header="Hours" Binding="{Binding Column5}" />
@@ -200,7 +206,10 @@
         </Border>
         <Rectangle HorizontalAlignment="Center" Height="62" Stroke="Black" VerticalAlignment="Top" Width="1922" Fill="Black" Margin="0,16,0,0"/>
         <Label Content="Monthly Claims" HorizontalAlignment="Left" Height="62" Margin="65,15,0,0" VerticalAlignment="Top" Width="471" FontFamily="Arial" FontSize="36" Foreground="White" VerticalContentAlignment="Center"/>
-        <Button Content="Submit Monthly Claim" Style="{StaticResource CustomButtonStyle}" HorizontalAlignment="Left" Height="60" Margin="88,919,0,0" VerticalAlignment="Top" Width="300" FontSize="20"/>
+        <Grid>
+            <Image Source="Logo.png" Width="30" Height="30" Margin="15,32,0,0" Stretch="UniformToFill" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        </Grid>
+        <Button Content="Submit All Claims" Style="{StaticResource CustomButtonStyle}" HorizontalAlignment="Left" Height="60" Margin="88,919,0,0" VerticalAlignment="Top" Width="300" FontSize="20"/>
         <Button Content="Logout" Style="{StaticResource CustomButtonStyle}" HorizontalAlignment="Left" Height="52" Margin="1765,20,0,0" VerticalAlignment="Top" Width="100" FontSize="20" Click="btn_logout_click" FontWeight="Normal"/>
         <Label Content="Lecture Name:" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="187" FontFamily="Century Gothic" FontSize="20" Margin="88,111,0,0"/>
         <Label Content="Employee No.:" HorizontalAlignment="Left" Height="36" VerticalAlignment="Top" Width="250" FontFamily="Century Gothic" FontSize="20" Margin="88,152,0,0"/>

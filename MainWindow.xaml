@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Contract_Monthly_Claim_System"
         mc:Ignorable="d"
-        Title="Home" Height="1020" Width="1920"
+        Title="" Height="1020" Width="1920"
         Left="0" Top="0">
     <Window.Resources>
         <!-- Define a style for the TextBox -->
@@ -70,13 +70,14 @@
 
     </Window.Resources>
     <Grid Margin="0,-16,0,16">
-        <Rectangle HorizontalAlignment="Left" Height="1024" Margin="800,0,0,0" Stroke="Black" VerticalAlignment="Top" Width="1122" Fill="Black"/>
+        <Rectangle HorizontalAlignment="Left" Margin="800,0,0,-20" Stroke="Black" Width="1122" Fill="Black"/>
         <Label Content="Welcome Back" HorizontalAlignment="Left" Height="69" Margin="88,281,0,0" VerticalAlignment="Top" Width="471" FontFamily="Georgia" FontSize="50"/>
         <Label Content="Welcome back! Please enter your details." HorizontalAlignment="Left" Height="39" Margin="88,350,0,0" VerticalAlignment="Top" Width="471" FontFamily="Century Gothic" FontSize="20"/>
         <Label Content="Email" HorizontalAlignment="Left" Height="31" Margin="88,435,0,0" VerticalAlignment="Top" Width="471" FontFamily="Century Gothic" FontSize="20"/>
         <Label Content="Password" HorizontalAlignment="Left" Height="31" Margin="88,552,0,0" VerticalAlignment="Top" Width="471" FontFamily="Century Gothic" FontSize="20"/>
-        <Button Content="Login" Style="{StaticResource CustomButtonStyle}" HorizontalAlignment="Left" Height="74" Margin="88,685.7,0,0" VerticalAlignment="Top" Width="624" FontSize="20" Click="Button_Click"/>
+        <Button Content="Lecturer Login" Style="{StaticResource CustomButtonStyle}" HorizontalAlignment="Left" Height="74" Margin="88,685.7,0,0" VerticalAlignment="Top" Width="624" FontSize="20" Click="btn_lecture_click"/>
         <TextBox Style="{StaticResource TextBoxStyle}" HorizontalAlignment="Left" Margin="88,466,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="624" Height="48" TextChanged="TextBox_TextChanged" HorizontalContentAlignment="Left" FontSize="20"/>
         <TextBox Style="{StaticResource TextBoxStyle}" HorizontalAlignment="Left" Margin="88,583,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="624" Height="48" TextChanged="TextBox_TextChanged" HorizontalContentAlignment="Left" FontSize="20"/>
+        <Button Content="Management Login" Style="{StaticResource CustomButtonStyle}" HorizontalAlignment="Left" Height="74" Margin="88,777,0,0" VerticalAlignment="Top" Width="624" FontSize="20" Click="btn_management_click"/>
     </Grid>
 </Window>

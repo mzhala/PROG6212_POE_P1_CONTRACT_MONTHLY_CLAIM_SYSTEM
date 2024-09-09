@@ -31,9 +31,9 @@ namespace Contract_Monthly_Claim_System
             obj.Show();
         }
 
-        private void btn_back_click(object sender, RoutedEventArgs e)
+        private void btn_historical_click(object sender, RoutedEventArgs e)
         {
-            Lecturer_Claim_Page obj = new Lecturer_Claim_Page();
+            Claim_Review_Historical_Page obj = new Claim_Review_Historical_Page();
             this.Visibility = Visibility.Hidden;
             obj.Show();
         }
